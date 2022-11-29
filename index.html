@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" />
+	<script src="app.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
@@ -32,13 +33,13 @@
 							<img src="img/LOGO.png" alt="">
 						</div>
 						<div class="nav">
-							<a href="#">ГЛАВНАЯ</a>
-							<a href="#">МЕНЮ</a>
-							<a href="#">О НАС</a>
-							<a href="#">БРОНЬ</a>
+							<a class="nav__item" href="#section-1">ГЛАВНАЯ</a>
+							<a class="nav__item" href="#section-2">МЕНЮ</a>
+							<a class="nav__item" href="#section-3">О НАС</a>
+							<a class="nav__item" href="#section-4">БРОНЬ</a>
 						</div>
 						<div class="cart">
-							<a href="#">
+							<a id="section-1" href="#">
 								<img src="img/cart.png" alt="">
 							</a>
 						</div>
@@ -60,10 +61,21 @@
 								ЗАКАЗ СТОЛИКА
 							</a>
 						</div>
+						<div class="burger-menu">
+							<button class="burger-button" id="burger">
+								<img src="img/burger-img.png" alt="">
+							</button>
+							<div id="menu" class="burger-menu__slide">
+								<a class="nav__item nav__block" href="#">ГЛАВНАЯ</a>
+								<a class="nav__item nav__block" href="#">МЕНЮ</a>
+								<a class="nav__item nav__block" href="#">О НАС</a>
+								<a class="nav__item nav__block" href="#">БРОНЬ</a>
+							</div>
+						</div>
 					</div>
 					<div class="header-down">
-						<div class="header__title item">
-							Добро пожаловать в
+						<div class="header__title">
+							<h1>Добро пожаловать в</h1>
 							<div class="header__subtitle">
 								Наш ресторан
 							</div>
@@ -84,7 +96,7 @@
 							<div class="cards__image">
 								<img class="cards__img" src="img/card.png" alt="">
 							</div>
-							<div class="cards__title item">Магическая <span>Атмосфера</span></div>
+							<div class="cards__title">Магическая <span>Атмосфера</span></div>
 							<div class="cards__desc">
 								В нашем заведении царит магическая атмосфера
 								наполненная вкусными ароматами
@@ -94,7 +106,7 @@
 							<div class="cards__image">
 								<img class="cards__img" src="img/card.png" alt="">
 							</div>
-							<div class="cards__title item">Лучшее качество <span>Еды</span></div>
+							<div class="cards__title">Лучшее качество <span>Еды</span></div>
 							<div class="cards__desc">
 								Качество нашей <br>
 								Еды - отменное!
@@ -104,7 +116,7 @@
 							<div class="cards__image">
 								<img class="cards__img" src="img/card.png" alt="">
 							</div>
-							<div class="cards__title item">Недорогая <span>Еда</span></div>
+							<div class="cards__title">Недорогая <span>Еда</span></div>
 							<div class="cards__desc">
 								Стоимость нашей Еды
 								зависит только от ее
@@ -144,7 +156,7 @@
 				<div class="container">
 					<div class="black-block__row">
 						<div class="black-block__left">
-							<div class="black-block__title">
+							<div id="section-4" class="black-block__title">
 								Отпразднуйте в одном из <br>
 								самых лучших ресторанов.
 							</div>
@@ -194,17 +206,17 @@
 			</div>
 			<div class="menu">
 				<div class="container">
-					<div class="menu__title">Наше меню</div>
+					<div id="section-2" class="menu__title item">Наше меню</div>
 					<div class="menu-items">
 						<div class="menu-item">
 							<div class="menu__recommended">
 								RECOMMENDED
 							</div>
 							<div class="menu__image">
-								<img src="img/menu-it class="img-gal"em.png" alt="">
+								<img src="img/menu-item.png" alt="">
 								<div class="munu__price-num">
 									<img class="menu__price" src="img/price.png" alt="">
-									<div class="mune__price-420">420</div>
+									<div class="menu__price-420">420</div>
 								</div>
 							</div>
 							<div class="menu__text">
@@ -225,7 +237,7 @@
 								<img src="img/menu-item.png" alt="">
 								<div class="munu__price-num">
 									<img class="menu__price" src="img/price.png" alt="">
-									<div class="mune__price-420">420</div>
+									<div class="menu__price-420">420</div>
 								</div>
 							</div>
 							<div class="menu__text">
@@ -246,7 +258,7 @@
 								<img src="img/menu-item.png" alt="">
 								<div class="munu__price-num">
 									<img class="menu__price" src="img/price.png" alt="">
-									<div class="mune__price-420">420</div>
+									<div class="menu__price-420">420</div>
 								</div>
 							</div>
 							<div class="menu__text">
@@ -267,10 +279,11 @@
 			</div>
 			<div class="comment">
 				<div class="container">
-					<div class="comment__text">
+					<div id="section-3" class="comment__text">
 						Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное
 						спасибо за
-						комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также
+						комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам
+						также
 						за рубежом,
 						путешествующих в Санкт-Петербург!!!
 					</div>
@@ -287,7 +300,7 @@
 					<div class="gallery__content">
 						<div class="gallery__left">
 							<div class="gallery__up">
-								<img class="img-gal" src="img/4.jpg" alt="">
+								<img class="img-gal high" src="img/4.jpg" alt="">
 							</div>
 							<div class="gallery__down">
 								<img class="img-gal" src="img/5.jpg" alt="">
@@ -300,7 +313,7 @@
 								<img class="img-gal" src="img/6.jpg" alt="">
 							</div>
 							<div class="gallery__down">
-								<img class="img-gal" src="img/4.jpg" alt="">
+								<img class="img-gal high" src="img/4.jpg" alt="">
 							</div>
 						</div>
 					</div>
